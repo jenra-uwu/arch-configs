@@ -1,2 +1,2 @@
 # arch-configs
-Configurations for my Ach Linux stuff
+btw i use arch :3
