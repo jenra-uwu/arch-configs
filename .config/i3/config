@@ -162,16 +162,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym l resize shrink height 5 px or 5 ppt
+        bindsym semicolon resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -190,9 +190,9 @@ bar {
 }
 
 # Screenshots
-bindsym $mod+backslash exec scrot ~/Pictures/Screenshot%Y-%m-%d%H:%M:%S.png
-bindsym $mod+shift+backslash exec scrot -u ~/Pictures/Screenshot%Y-%m-%d%H:%M:%S.png
-bindsym $mod+shift+Return exec scrot -s ~/Pictures/Screenshot%Y-%m-%d%H:%M:%S.png
+bindsym $mod+backslash exec scrot ~/Pictures/Screenshots/Screenshot%Y-%m-%d%H:%M:%S.png
+bindsym $mod+shift+backslash exec scrot -u ~/Pictures/Screenshots/Screenshot%Y-%m-%d%H:%M:%S.png
+bindsym XF86LaunchA exec scrot -s ~/Pictures/Screenshots/Screenshot%Y-%m-%d%H:%M:%S.png
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
@@ -204,6 +204,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Touchpad
+exec xinput --set-prop bcm5974 "libinput Tapping Enabled" 1
 exec xinput --set-prop bcm5974 "libinput Natural Scrolling Enabled" 1
 exec xinput --set-prop bcm5974 "libinput Disable While Typing Enabled" 0
 exec xinput --set-prop bcm5974 "libinput Tapping Drag Enabled" 0
@@ -211,3 +212,9 @@ exec xinput --set-prop bcm5974 "libinput Tapping Drag Enabled" 0
 # Wallpaper
 exec_always feh --bg-fill wallpaper.jpg
 exec_always compton -f
+
+# Gaps
+for_window [class=".*"] border pixel 0
+gaps inner 10
+gaps outer 0
+
