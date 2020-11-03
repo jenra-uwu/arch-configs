@@ -1,0 +1,154 @@
+[colors]
+base03	= #c0002b36
+base02	= #c0073642
+base01	= #c0586e75
+base00	= #657b83
+base0	= #839496
+base1	= #93a1a1
+base2	= #eee8d5
+base3	= #fdf6e3
+
+yellow	= #b58900
+orange	= #cb4b16
+red		= #dc322f
+magenta	= #d33682
+violet	= #6c71c4
+blue	= #268bd2
+cyan	= #2aa198
+green	= #859900
+
+[bar/top]
+width = 99%
+height = 27
+radius = 6.0
+fixed-center = true
+offset-x = 0.5%
+offset-y = 5
+override-redirect = true
+
+background = ${colors.base03}
+foreground = ${colors.base3}
+
+line-size = 3
+line-color = #f00
+
+border-color = #00000000
+
+padding-left = 2
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = "System San Francisco Display Regular:size=11;2"
+font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
+font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
+
+modules-left = i3
+modules-center = date
+modules-right = network pulseaudio battery
+
+tray-position = none
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+ws-icon-default = 
+
+label-mode = %mode%
+
+label-focused = %icon%
+label-focused-background = ${colors.base01}
+label-focused-underline = ${colors.magenta}
+label-focused-padding = 2
+
+label-unfocused = %icon%
+label-unfocused-padding = 2
+
+label-urgent = %icon%
+label-urgent-underline = ${colors.red}
+label-urgent-padding = 2
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+interval = 5
+
+format-volume = <ramp-volume> <label-volume>
+label-muted =   0%
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+
+[module/date]
+type = internal/date
+
+interval = 1.0
+
+date = %B %d, %Y
+time = %H:%M:%S
+
+label = %date% %time%
+label-underline = ${colors.violet}
+
+[module/network]
+type = internal/network
+
+interface = wlp3s0
+
+label-connected =  %downspeed%
+
+label-disconnected = 
+
+[module/battery]
+type = internal/battery
+
+full-at = 95
+
+battery = BAT0
+adapter = ADP1
+
+poll-interval = 1
+
+time-format = %H:%M
+
+format-full = <ramp-capacity> <label-full>
+label-full = 100%
+label-full-underline = ${colors.green}
+
+format-charging = <animation-charging> <label-charging>
+label-charging = %percentage%% (%time%)
+label-charging-underline = ${colors.green}
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%% (%time%)
+label-discharging-underline = ${colors.yellow}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 500
+
