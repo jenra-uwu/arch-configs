@@ -10,5 +10,6 @@
 - nano
 - polybar
 - rofi
+- scrot
 - sddm
 - vim
