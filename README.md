@@ -6,6 +6,7 @@
 - fish
 - i3-gaps (with xorg)
 - kitty
+- libinput-three-finger-drag
 - polybar
 - rofi
 - sddm
