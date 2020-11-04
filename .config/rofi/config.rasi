@@ -1,0 +1,15 @@
+configuration {
+	font: "System San Francisco 20";
+	fullscreen: false;
+	color-window: "#c0002b36";
+	color-normal: "#00000000, #fdf6e3, #00000000";
+	color-active: "#767676, #fdf6e3";
+	color-urgent: "#00000000, #dc322f";
+
+	lines: 5;
+	max-history-size: 5;
+
+	hide-scrollbar: true;
+	bw: 0;
+	separator-style: "none";
+}
