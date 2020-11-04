@@ -4,6 +4,7 @@
 ## Packages installed
 - compton
 - fish
+- feh
 - i3-gaps (with xorg)
 - kitty
 - libinput-three-finger-drag
