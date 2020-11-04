@@ -7,6 +7,8 @@
 - i3-gaps (with xorg)
 - kitty
 - libinput-three-finger-drag
+- nano
 - polybar
 - rofi
 - sddm
+- vim
