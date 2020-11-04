@@ -6,7 +6,8 @@ if [ (echo -e " Logout\n Cancel" | rofi -dmenu	\
 		-mesg "Are you sure you wanna log out?"		\
 		-p "Logout" -window-title "Logout"			\
 		-selected-row 1	-i							\
-		-only-match -no-custom						\
+		-no-custom									\
+		-kb-select-1 "Super+Q"						\
 	) = " Logout" ]
 	i3-msg exit
 end
