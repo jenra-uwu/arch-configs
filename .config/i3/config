@@ -15,13 +15,6 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:System San Francisco Display 10
 
-# gtk-theme-name = "Venta Dark"
-# gtk-font-name = "San Francisco Display 10"
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -87,7 +80,7 @@ bindsym $mod+semicolon split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f exec ~/.config/i3/fullscreen.sh
+bindsym $mod+f exec --no-startup-id ~/.config/i3/fullscreen.sh
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -99,12 +92,6 @@ bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+d focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -198,19 +185,11 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# Touchpad
-exec --no-startup-id xinput --set-prop bcm5974 "libinput Tapping Enabled" 1
-exec --no-startup-id xinput --set-prop bcm5974 "libinput Natural Scrolling Enabled" 1
-exec --no-startup-id xinput --set-prop bcm5974 "libinput Disable While Typing Enabled" 0
-exec --no-startup-id xinput --set-prop bcm5974 "libinput Tapping Drag Enabled" 0
-
 # Wallpaper
 exec_always --no-startup-id feh --bg-fill wallpaper.jpg
 exec_always --no-startup-id compton -f
 
 # Gaps
-new_window none
-new_float none
 for_window [class=".*"] border none
 gaps inner 10
 gaps outer 0
