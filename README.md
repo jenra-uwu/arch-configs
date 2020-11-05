@@ -13,6 +13,7 @@
 - rofi
 - scrot
 - sddm
+- solarized-sddm-theme
 - vim
 
 ## Fonts installed
