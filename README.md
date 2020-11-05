@@ -14,3 +14,9 @@
 - scrot
 - sddm
 - vim
+
+## Fonts installed
+- Fira Code
+- Font Awesome
+- System San Francisco
+
