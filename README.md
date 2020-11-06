@@ -15,7 +15,6 @@
 - sddm
 - solarized-sddm-theme
 - vim
-- xautolock
 - xorg
 - xss-lock
 
