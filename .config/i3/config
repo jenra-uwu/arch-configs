@@ -199,6 +199,7 @@ gaps top 30
 
 # Start notification system
 exec --no-startup-id twmnd
+exec --no-startup-id ../twmn/battery_notifier.sh
 
 # Touchpad
 exec --no-startup-id xinput --set-prop bcm5974 "libinput Tapping Enabled" 1
