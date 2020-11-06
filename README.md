@@ -5,7 +5,7 @@
 - compton
 - fish
 - feh
-- i3-gaps (with xorg)
+- i3-gaps
 - kitty
 - libinput-three-finger-drag
 - nano
@@ -15,6 +15,9 @@
 - sddm
 - solarized-sddm-theme
 - vim
+- xautolock
+- xorg
+- xss-lock
 
 ## Fonts installed
 - Fira Code
