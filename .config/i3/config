@@ -141,7 +141,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+q exec ~/.config/i3/logout.sh
+bindsym $mod+Shift+q exec /home/lauragallo/.config/i3/logout.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -179,8 +179,8 @@ bindsym $mod+shift+backslash exec scrot -u ~/Pictures/Screenshots/Screenshot%Y-%
 bindsym XF86LaunchA exec scrot -s ~/Pictures/Screenshots/Screenshot%Y-%m-%d%H:%M:%S.png
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec light -U 10
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause

@@ -8,6 +8,7 @@
 - i3-gaps
 - kitty
 - libinput-three-finger-drag
+- light
 - nano
 - polybar
 - rofi
