@@ -182,6 +182,10 @@ bindsym XF86LaunchA exec scrot -s ~/Pictures/Screenshots/Screenshot%Y-%m-%d%H:%M
 bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
+# Keyboard brightness controls
+bindsym XF86KbdBrightnessUp exec light -s sysfs/leds/smc::kbd_backlight -A 10
+bindsym XF86KbdBrightnessDown exec light -s sysfs/leds/smc::kbd_backlight -U 10
+
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
