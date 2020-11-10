@@ -14,7 +14,6 @@
 - rofi
 - scrot
 - sddm
-- solarized-sddm-theme
 - vim
 - xorg
 - xss-lock
@@ -24,3 +23,6 @@
 - Font Awesome
 - System San Francisco
 
+## Theme installed
+- Solarized-Dark-Magenta
+- solarized-sddm-theme
