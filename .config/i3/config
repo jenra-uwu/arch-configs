@@ -80,7 +80,7 @@ bindsym $mod+semicolon split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f exec ~/config/i3/fullscreen.sh
+bindsym $mod+f exec --no-startup-id fish ~/.config/i3/fullscreen.sh
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -141,7 +141,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/logout.sh
+bindsym $mod+Shift+q exec --no-startup-id fish ~/.config/i3/logout.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -203,7 +203,7 @@ gaps top 30
 
 # Start notification system
 exec --no-startup-id twmnd
-exec --no-startup-id ../twmn/battery_notifier.sh
+exec --no-startup-id fish ~/.config/twmn/battery_notifier.sh
 
 # Touchpad
 exec --no-startup-id xinput --set-prop bcm5974 "libinput Tapping Enabled" 1
