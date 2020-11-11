@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath, amssymb, amsthm, amsfonts}
+\usepackage{subcaption, enumerate}
+\usepackage{bbold}
+\usepackage{polynom}
+\usepackage{xfrac}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{enumitem}
+
+\usepackage{tikz}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corot}{Corollary}[theorem]
+\newtheorem{lemma}{Lemma}
+\newtheorem{corol}{Corollary}[lemma]
+\newtheorem{proposition}{Proposition}
+\newtheorem{corop}{Corollary}[proposition]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{exampled}{Example}[definition]
+\newtheorem{examples}{Example}[section]
+\newtheorem*{notation}{Notation}
+
+\newcommand{\dab}
+{
+	\begin{tikzpicture}[scale=0.04]
+		% head
+		\draw[thick] (0, 0) circle (3cm);
+
+		% bent arm
+		\draw[thick, rotate around={15 : (0, 0)}] (-3, 0) -- (-3.7, -2) -- (4.1, -1.1);
+
+		% extended arm
+		\draw[thick, rotate=20] (3, 0) -- (7, 2);
+	\end{tikzpicture}
+}
+\newcommand{\st}{\text{ s.t. }}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\usepackage{fullpage}
+
+\title{Title \\ with Teacher}
+\author{Laura Gallo}
+\date{DATE}
+
+\begin{document}
+\maketitle
+
+
+
+\end{document}
+
