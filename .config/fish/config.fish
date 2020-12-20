@@ -1,4 +1,3 @@
-alias ls='ls --color=auto'
 alias rickroll='curl -L http://bit.ly/10hA8iC | fish'
 alias please=sudo
 alias config='git --git-dir=$HOME/arch-configs.git/ --work-tree=$HOME'
@@ -8,8 +7,6 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 abbr -ag mute-mic pactl set-source-mute @DEFAULT_SOURCE@
-
-thefuck --alias | source
 
 function bind_bang
     switch (commandline -t)[-1]
@@ -35,3 +32,4 @@ function fish_user_key_bindings
     bind '$' bind_dollar
 end
 
+set -g fish_user_paths "/usr/local/opt/openjdk/bin" $fish_user_paths
