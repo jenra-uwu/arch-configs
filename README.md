@@ -14,6 +14,7 @@
 - rofi
 - scrot
 - sddm
+- twmn
 - vim
 - xorg
 - xss-lock
