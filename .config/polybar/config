@@ -18,13 +18,8 @@ cyan	= #2aa198
 green	= #859900
 
 [bar/top]
-width = 99%
 height = 27
-radius = 6.0
 fixed-center = true
-offset-x = 0.5%
-offset-y = 5
-override-redirect = true
 
 background = ${colors.base03}
 foreground = ${colors.base3}

@@ -80,7 +80,7 @@ bindsym $mod+semicolon split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f exec --no-startup-id fish ~/.config/i3/fullscreen.sh
+bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -199,7 +199,6 @@ exec_always --no-startup-id compton -f
 for_window [class=".*"] border none
 gaps inner 10
 gaps outer 0
-gaps top 30
 
 # Start notification system
 exec --no-startup-id twmnd
