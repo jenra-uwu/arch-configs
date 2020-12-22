@@ -3,9 +3,6 @@ alias please=sudo
 alias config='git --git-dir=$HOME/arch-configs.git/ --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
 
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
 abbr -ag mute-mic pactl set-source-mute @DEFAULT_SOURCE@
 
 function bind_bang
@@ -33,3 +30,19 @@ function fish_user_key_bindings
 end
 
 set -g fish_user_paths "/usr/local/opt/openjdk/bin" $fish_user_paths
+
+thefuck --alias | source
+
+set __fish_git_prompt_show_informative_status
+set __fish_git_prompt_showcolorhints
+set __fish_git_prompt_showupstream "informative"
+
+function fish_greeting
+	neofetch -L
+end
+
+function fish_prompt
+	echo -n (set_color --bold green)(prompt_pwd)(set_color normal)
+	echo -n (__fish_git_prompt)
+	echo (set_color --bold magenta)' ~> '(set_color normal)
+end
