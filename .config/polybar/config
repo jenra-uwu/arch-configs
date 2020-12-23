@@ -42,7 +42,7 @@ font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
 
 modules-left = i3
 modules-center = date
-modules-right = network pulseaudio battery
+modules-right = network microphone pulseaudio battery
 
 tray-position = none
 
@@ -75,6 +75,11 @@ label-unfocused-padding = 2
 label-urgent = %icon%
 label-urgent-underline = ${colors.red}
 label-urgent-padding = 2
+
+[module/microphone]
+type = custom/script
+exec = fish ~/.config/polybar/microphone-mute.sh
+interval = 0.1
 
 [module/pulseaudio]
 type = internal/pulseaudio
