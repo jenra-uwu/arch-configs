@@ -10,6 +10,8 @@
 - kitty
 - libinput-three-finger-drag
 - light
+- mpv
+- mpv-mpris
 - nano
 - polybar
 - rofi
