@@ -6,6 +6,7 @@
 - fish
 - feh
 - i3-gaps
+- jq
 - kitty
 - libinput-three-finger-drag
 - light
