@@ -130,6 +130,10 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# Moving workspaces
+bindsym $mod+p exec --no-startup-id fish ~/.config/i3/next_workspace.sh
+bindsym $mod+o exec --no-startup-id fish ~/.config/i3/prev_workspace.sh
+
 # Applications
 exec --no-startup-id discord
 assign [class="discord"] $ws10
