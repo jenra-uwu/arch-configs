@@ -1,5 +1,6 @@
 alias rickroll='curl -L http://bit.ly/10hA8iC | fish'
 alias please=sudo
+alias ssh='kitty +kitten ssh'
 alias config='git --git-dir=$HOME/arch-configs.git/ --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
 
