@@ -10,7 +10,6 @@ set clipboard=unnamedplus
 " Copying in visual mode
 vnoremap <C-c> y
 
-
 " Opening brackets
 inoremap { {}<Esc>i
 inoremap \{ \{\}<Esc>hi
