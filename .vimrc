@@ -8,7 +8,7 @@ filetype on
 set clipboard=unnamedplus
 
 " Copying in visual mode
-vnoremap <C-c> "+y
+vnoremap <C-c> "
 
 
 " Opening brackets
