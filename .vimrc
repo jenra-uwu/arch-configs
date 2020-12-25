@@ -35,7 +35,7 @@ vnoremap ( <Esc>`>a)<Esc>`<i(<Esc>
 vnoremap \( <Esc>`>a\)<Esc>`<i\(<Esc>
 
 " Newlines that preserve indentation
-inoremap <CR> <Esc>0i <Esc>A.<Esc>0"wy/\S<CR>"_x$"_xo<Esc>"wp0"_xA
+inoremap <CR> <Esc>l"qd$0i <Esc>A.<Esc>0"wy/\S<CR>"_x$"_xo<Esc>"wp0"_x$"qpI
 
 
 " LaTeX stuff
