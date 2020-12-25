@@ -1,4 +1,4 @@
-# arch-configs
+# dotfiles
 `<meme>btw i use arch :3</meme>`
 
 ## Packages installed
