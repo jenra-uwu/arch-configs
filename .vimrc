@@ -6,6 +6,7 @@ syntax on
 set mouse=a
 filetype on
 set clipboard=unnamedplus
+nnoremap x "_x
 
 " Copying in visual mode
 vnoremap <C-c> y
@@ -34,7 +35,7 @@ vnoremap ( <Esc>`>a)<Esc>`<i(<Esc>
 vnoremap \( <Esc>`>a\)<Esc>`<i\(<Esc>
 
 " Newlines that preserve indentation
-inoremap <CR> <Esc>l"qd$0i <Esc>A.<Esc>0"wy/\S<CR>"_x$"_xo<Esc>"wp0"_x$"qpI
+inoremap <CR> <Esc>A.<Esc>F"qd$0i <Esc>A.<Esc>0"wy/\S<CR>"_x$"_xo<Esc>"wp0"_x$"qp"_x^"_xI
 
 
 " LaTeX stuff
