@@ -6,6 +6,7 @@
 - fish
 - feh
 - ff2mpv-native-messaging-host-git (and corresponding firefox extension ff2mpv)
+- gvim
 - i3-gaps
 - jq
 - kitty
@@ -19,7 +20,6 @@
 - scrot
 - sddm
 - twmn
-- vim
 - xorg
 - xss-lock
 
