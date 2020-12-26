@@ -1,3 +1,5 @@
+fish_vi_key_bindings
+
 alias rickroll='curl -L http://bit.ly/10hA8iC | fish'
 alias please=sudo
 alias ssh='kitty +kitten ssh'
@@ -43,7 +45,11 @@ function fish_greeting
 end
 
 function fish_prompt
+	set -l stat $status
 	echo -n (set_color --bold green)(prompt_pwd)(set_color normal)
 	echo -n (__fish_git_prompt)
+	if [ $stat -ne 0 ]
+		echo -n (set_color --bold red) $stat
+	end
 	echo (set_color --bold magenta)' ~> '(set_color normal)
 end
