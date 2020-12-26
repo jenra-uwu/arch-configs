@@ -140,7 +140,7 @@ assign [class="discord"] $ws10
 assign [class="minecraft-launcher"] $ws4
 assign [class="Minecraft.*"] $ws4
 bindsym $mod+b exec --no-startup-id firefox
-bindsym $mod+Shift+b exec --no-startup-id firefox --private-window duckduckgo.com
+bindsym $mod+Shift+p exec --no-startup-id firefox --private-window duckduckgo.com
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
