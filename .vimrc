@@ -19,13 +19,12 @@ inoremap [ []<Esc>i
 inoremap \[ \[\]<Esc>hi
 inoremap ( ()<Esc>i
 inoremap \( \(\)<Esc>hi
-inoremap " ""<Esc>i
+
 
 " Closing brackets
-inoremap } <Esc>f}a
-inoremap ] <Esc>f]a
-inoremap ) <Esc>f)a
-inoremap <C-l> <Esc>f"a
+inoremap } <Esc>:if col(".") < col("$") && getline(".")[col(".")] == "}"<CR>let @q = "}"<CR>else<CR>let @q = "}}"<CR>end<CR>"qpxa
+inoremap ] <Esc>:if col(".") < col("$") && getline(".")[col(".")] == "]"<CR>let @q = "]"<CR>else<CR>let @q = "]]"<CR>end<CR>"qpxa
+inoremap ) <Esc>:if col(".") < col("$") && getline(".")[col(".")] == ")"<CR>let @q = ")"<CR>else<CR>let @q = "))"<CR>end<CR>"qpxa
 
 " Visual mode brackets
 vnoremap { <Esc>`>a}<Esc>`<i{<Esc>
