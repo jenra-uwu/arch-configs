@@ -16,10 +16,13 @@
 - mpv-mpris
 - nano
 - polybar
+- ranger
 - rofi
 - scrot
 - sddm
+- trash-cli
 - twmn
+- ueberzug
 - xorg
 - xss-lock
 

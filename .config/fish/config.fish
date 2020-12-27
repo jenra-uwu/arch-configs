@@ -1,5 +1,3 @@
-fish_vi_key_bindings
-
 alias rickroll='curl -L http://bit.ly/10hA8iC | fish'
 alias please=sudo
 alias ssh='kitty +kitten ssh'
@@ -32,7 +30,7 @@ function fish_user_key_bindings
     bind '$' bind_dollar
 end
 
-set -g fish_user_paths "/usr/local/opt/openjdk/bin" $fish_user_paths
+set -g fish_user_paths ~/.local/bin /usr/local/opt/openjdk/bin $fish_user_paths
 
 thefuck --alias | source
 
