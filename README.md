@@ -27,9 +27,11 @@
 - xss-lock
 
 ## Fonts installed
-- Fira Code
 - Font Awesome
-- System San Francisco
+- nerd-fonts-fira-code
+- noto-fonts-cjk
+- noto-fonts-emoji
+- otf-firamath
 
 ## Theme installed
 - Solarized-Dark-Magenta

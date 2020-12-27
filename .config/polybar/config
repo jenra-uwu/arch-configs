@@ -35,7 +35,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = "System San Francisco Display Regular:size=11;2"
+font-0 = "FiraMath-Medium.otf: Fira Math,Fira Math Medium:size=11;2"
 font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
 font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
