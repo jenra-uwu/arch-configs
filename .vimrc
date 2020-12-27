@@ -8,6 +8,7 @@ filetype on
 set clipboard=unnamedplus
 set nocompatible
 nnoremap x "_x
+let g:kite_auto_complete=1
 
 " Copying in visual mode
 vnoremap <C-c> y

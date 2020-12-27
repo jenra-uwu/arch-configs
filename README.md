@@ -25,6 +25,7 @@
 - trash-cli
 - twmn
 - ueberzug
+- vim-youcompleteme-git
 - xorg
 - xss-lock
 
