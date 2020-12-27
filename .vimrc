@@ -6,6 +6,7 @@ syntax on
 set mouse=a
 filetype on
 set clipboard=unnamedplus
+set nocompatible
 nnoremap x "_x
 
 " Copying in visual mode

@@ -7,6 +7,7 @@
 - feh
 - ff2mpv-native-messaging-host-git (and corresponding firefox extension ff2mpv)
 - gvim
+- highlight
 - i3-gaps
 - jq
 - kitty
