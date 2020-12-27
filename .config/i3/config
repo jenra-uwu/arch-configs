@@ -180,9 +180,9 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id killall -q polybar; polybar -c .config/polybar/config top
 
 # Screenshots
-bindsym ctrl+shift+3 exec scrot ~/Pictures/Screenshots/Screenshot%Y-%m-%d%H:%M:%S.png
-bindsym ctrl+shift+5 exec scrot -u ~/Pictures/Screenshots/Screenshot%Y-%m-%d%H:%M:%S.png
-bindsym --release ctrl+shift+4 exec scrot -s ~/Pictures/Screenshots/Screenshot%Y-%m-%d%H:%M:%S.png
+bindsym ctrl+shift+3 exec scrot ~/Pictures/Screenshots/Screenshot\ %Y-%m-%d\ %H:%M:%S.png
+bindsym ctrl+shift+5 exec scrot -u ~/Pictures/Screenshots/Screenshot\ %Y-%m-%d\ %H:%M:%S.png
+bindsym --release ctrl+shift+4 exec scrot -s ~/Pictures/Screenshots/Screenshot\ %Y-%m-%d\ %H:%M:%S.png
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 10
