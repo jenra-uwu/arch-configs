@@ -35,15 +35,28 @@ vnoremap \[ <Esc>`>a\]<Esc>`<i\[<Esc>
 vnoremap ( <Esc>`>a)<Esc>`<i(<Esc>
 vnoremap \( <Esc>`>a\)<Esc>`<i\(<Esc>
 
+" Recursive :find
+set path+=**
+set wildmenu
+
+" Use ^] to jump to tag under cursor
+" Use g^] for ambiguous tags
+" Use ^t to jump back up the tag stack
+command! MakeTags ! ctags -R .
+map S :w<CR>:! ctags -R .<CR><CR>
+
+" ^x^f for file names
+" ^x^] for tags
+" ^n and ^p to go to next and previous suggestion
+
 " Newlines that preserve indentation
 inoremap <CR> <Esc>A.<Esc>F"qd$0i <Esc>A.<Esc>0"wy/\S<CR>"_x$"_xo<Esc>"wp0"_x$"qp"_x^"_xI
-
 
 " LaTeX stuff
 " Set file type
 au BufRead,BufNewFile *.tex set filetype=tex
 " Insert template
-au BufNewFile *.tex 0r ~/.vimtemplates/latex.tex
+au BufNewFile *.tex 0r ~/.vim/templates/latex.tex
 " Jump to next %%%%
 autocmd FileType tex inoremap ;; <Esc>/%%%%<Enter>"_c4l
 autocmd FileType tex inoremap ;b \begin{}<Esc>i
