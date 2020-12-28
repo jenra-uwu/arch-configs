@@ -8,7 +8,8 @@ filetype on
 set clipboard=unnamedplus
 set nocompatible
 nnoremap x "_x
-let g:kite_auto_complete=1
+highlight Pmenu ctermbg=darkcyan guibg=darkcyan ctermfg=black guifg=black
+highlight PmenuSel ctermbg=darkblue guibg=darkblue ctermfg=black guifg=black
 
 " Copying in visual mode
 vnoremap <C-c> y
