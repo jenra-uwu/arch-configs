@@ -181,17 +181,17 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id killall -q polybar; polybar -c .config/polybar/config top
 
 # Screenshots
-bindsym ctrl+shift+3 exec scrot ~/Pictures/Screenshots/Screenshot\ %Y-%m-%d\ %H:%M:%S.png
-bindsym ctrl+shift+5 exec scrot -u ~/Pictures/Screenshots/Screenshot\ %Y-%m-%d\ %H:%M:%S.png
-bindsym --release ctrl+shift+4 exec scrot -s ~/Pictures/Screenshots/Screenshot\ %Y-%m-%d\ %H:%M:%S.png
+bindsym ctrl+shift+3 exec --no-startup-id scrot ~/Pictures/Screenshots/Screenshot\ %Y-%m-%d\ %H:%M:%S.png
+bindsym ctrl+shift+5 exec --no-startup-id scrot -u ~/Pictures/Screenshots/Screenshot\ %Y-%m-%d\ %H:%M:%S.png
+bindsym --release ctrl+shift+4 exec --no-startup-id scrot -s ~/Pictures/Screenshots/Screenshot\ %Y-%m-%d\ %H:%M:%S.png
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec light -A 10
-bindsym XF86MonBrightnessDown exec light -U 10
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
 
 # Keyboard brightness controls
-bindsym XF86KbdBrightnessUp exec light -s sysfs/leds/smc::kbd_backlight -A 10
-bindsym XF86KbdBrightnessDown exec light -s sysfs/leds/smc::kbd_backlight -U 10
+bindsym XF86KbdBrightnessUp exec --no-startup-id light -s sysfs/leds/smc::kbd_backlight -A 10
+bindsym XF86KbdBrightnessDown exec --no-startup-id light -s sysfs/leds/smc::kbd_backlight -U 10
 
 # Media player controls
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
