@@ -200,7 +200,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Wallpaper
 exec_always --no-startup-id feh --bg-fill wallpaper.jpg
-exec_always --no-startup-id picom -f
+exec_always --no-startup-id picom -f --config ~/.config/picom/picom.conf
 
 # Gaps
 for_window [class=".*"] border none
@@ -208,8 +208,8 @@ gaps inner 10
 gaps outer 0
 
 # Start notification system
-exec --no-startup-id twmnd
-exec --no-startup-id fish ~/.config/twmn/battery_notifier.sh
+exec --no-startup-id dunst
+exec --no-startup-id fish ~/.config/dunst/battery_notifier.sh
 
 # Touchpad
 exec --no-startup-id xinput --set-prop bcm5974 "libinput Tapping Enabled" 1

@@ -2,8 +2,8 @@
 `<meme>btw i use arch :3</meme>`
 
 ## Packages installed
-- compton
 - ctags
+- dunst
 - fish
 - feh
 - ff2mpv-native-messaging-host-git (and corresponding firefox extension ff2mpv)
@@ -17,13 +17,13 @@
 - mpv
 - mpv-mpris
 - nano
+- picom-ibhagwan-git
 - polybar
 - ranger
 - rofi
 - scrot
 - sddm
 - trash-cli
-- twmn
 - ueberzug
 - vim-youcompleteme-git
 - xorg
