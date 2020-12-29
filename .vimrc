@@ -23,7 +23,6 @@ inoremap \[ \[\]<Esc>hi
 inoremap ( ()<Esc>i
 inoremap \( \(\)<Esc>hi
 
-
 " Closing brackets
 inoremap } <Esc>:if col(".") < col("$") && getline(".")[col(".")] == "}"<CR>let @q = "}"<CR>else<CR>let @q = "}}"<CR>end<CR>"qpxa
 inoremap ] <Esc>:if col(".") < col("$") && getline(".")[col(".")] == "]"<CR>let @q = "]"<CR>else<CR>let @q = "]]"<CR>end<CR>"qpxa
@@ -53,6 +52,12 @@ map S :w<CR>:! ctags -R .<CR><CR>
 
 " Newlines that preserve indentation
 inoremap <CR> <Esc>A.<Esc>F"qd$0i <Esc>A.<Esc>0"wy/\S<CR>"_x$"_xo<Esc>"wp0"_x$"qp"_x^"_xI
+
+" Plugins
+call plug#begin('~/.vim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+
 
 " LaTeX stuff
 " Set file type

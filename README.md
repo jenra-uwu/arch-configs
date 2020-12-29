@@ -25,7 +25,6 @@
 - sddm
 - trash-cli
 - ueberzug
-- vim-youcompleteme-git
 - xorg
 - xss-lock
 
@@ -39,3 +38,12 @@
 ## Theme installed
 - Solarized-Dark-Magenta
 - solarized-sddm-theme
+
+## Vim plugins
+- vim-plug
+- coc.nvim
+	- coc-clangd
+	- coc-java
+	- coc-python
+	- coc-rust
+	- coc-vimtex
