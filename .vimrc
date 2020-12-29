@@ -8,6 +8,7 @@ filetype on
 set clipboard=unnamedplus
 set nocompatible
 nnoremap x "_x
+nnoremap c "_c
 highlight Pmenu ctermbg=darkcyan guibg=darkcyan ctermfg=black guifg=black
 highlight PmenuSel ctermbg=darkblue guibg=darkblue ctermfg=black guifg=black
 
