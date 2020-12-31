@@ -19,6 +19,7 @@
 - nano
 - picom-ibhagwan-git
 - polybar
+- qbittorrent
 - ranger
 - rofi
 - scrot
