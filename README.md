@@ -19,6 +19,7 @@
 - mpv-mpris
 - nano
 - picom-ibhagwan-git
+- playerctl
 - polybar
 - qbittorrent
 - ranger
