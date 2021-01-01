@@ -3,6 +3,7 @@
 
 ## Packages installed
 - ctags
+- dragon-drag-and-drop
 - dunst
 - fish
 - feh
@@ -46,5 +47,5 @@
 	- coc-clangd
 	- coc-java
 	- coc-python
-	- coc-rust
+	- coc-rust-analyzer
 	- coc-vimtex
