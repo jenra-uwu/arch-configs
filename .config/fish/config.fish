@@ -1,4 +1,4 @@
-alias rickroll='curl -L http://bit.ly/10hA8iC | fish'
+alias rickroll='curl -L http://bit.ly/10hA8iC | bash'
 alias please=sudo
 alias ssh='kitty +kitten ssh'
 alias config='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'

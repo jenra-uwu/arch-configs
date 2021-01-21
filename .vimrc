@@ -7,10 +7,11 @@ set mouse=a
 filetype on
 set clipboard=unnamedplus
 set nocompatible
+set autoread
 nnoremap x "_x
 nnoremap c "_c
-highlight Pmenu ctermbg=darkcyan guibg=darkcyan ctermfg=black guifg=black
-highlight PmenuSel ctermbg=darkblue guibg=darkblue ctermfg=black guifg=black
+highlight Pmenu ctermbg=darkblue guibg=darkblue ctermfg=white guifg=white
+highlight PmenuSel ctermbg=blue guibg=blue ctermfg=white guifg=white
 
 " Copying in visual mode
 vnoremap <C-c> y
@@ -51,7 +52,7 @@ map S :w<CR>:! ctags -R .<CR><CR>
 " ^n and ^p to go to next and previous suggestion
 
 " Newlines that preserve indentation
-inoremap <CR> <Esc>A.<Esc>F"qd$0i <Esc>A.<Esc>0"wy/\S<CR>"_x$"_xo<Esc>"wp0"_x$"qp"_x^"_xI
+" inoremap <CR> <Esc>A.<Esc>F"qd$0i <Esc>A.<Esc>0"wy/\S<CR>"_x$"_xo<Esc>"wp0"_x$"qp"_x^"_xI
 
 " Plugins
 call plug#begin('~/.vim/plugged')

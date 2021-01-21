@@ -139,6 +139,7 @@ exec --no-startup-id discord
 assign [class="discord"] $ws10
 assign [class="minecraft-launcher"] $ws4
 assign [class="Minecraft.*"] $ws4
+assign [class="zoom"] $ws4
 bindsym $mod+b exec --no-startup-id firefox
 bindsym $mod+Shift+p exec --no-startup-id firefox --private-window duckduckgo.com
 bindsym $mod+e exec --no-startup-id i3-sensible-terminal ranger

@@ -110,6 +110,7 @@ label-underline = ${colors.violet}
 type = internal/network
 
 interface = wlp3s0
+unknown-as-up = true
 
 label-connected =  %downspeed%
 
