@@ -12,6 +12,8 @@ nnoremap x "_x
 nnoremap c "_c
 vnoremap x "_x
 vnoremap c "_c
+set background=dark
+colorscheme solarized8
 
 " Copying in visual mode
 vnoremap <C-c> y
