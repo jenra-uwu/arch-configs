@@ -10,8 +10,8 @@ set nocompatible
 set autoread
 nnoremap x "_x
 nnoremap c "_c
-highlight Pmenu ctermbg=darkblue guibg=darkblue ctermfg=white guifg=white
-highlight PmenuSel ctermbg=blue guibg=blue ctermfg=white guifg=white
+vnoremap x "_x
+vnoremap c "_c
 
 " Copying in visual mode
 vnoremap <C-c> y
@@ -24,10 +24,18 @@ inoremap \[ \[\]<Esc>hi
 inoremap ( ()<Esc>i
 inoremap \( \(\)<Esc>hi
 
+function CloseBracket(closing)
+	let @q = a:closing
+	if col(".") < col("$") && getline(".")[col(".")] == a:closing
+	else
+		let @Q = a:closing
+	end
+endfunction
+
 " Closing brackets
-inoremap } <Esc>:if col(".") < col("$") && getline(".")[col(".")] == "}"<CR>let @q = "}"<CR>else<CR>let @q = "}}"<CR>end<CR>"qpxa
-inoremap ] <Esc>:if col(".") < col("$") && getline(".")[col(".")] == "]"<CR>let @q = "]"<CR>else<CR>let @q = "]]"<CR>end<CR>"qpxa
-inoremap ) <Esc>:if col(".") < col("$") && getline(".")[col(".")] == ")"<CR>let @q = ")"<CR>else<CR>let @q = "))"<CR>end<CR>"qpxa
+inoremap } <Esc>:call CloseBracket("}")<CR>"qp"_xa
+inoremap ] <Esc>:call CloseBracket("]")<CR>"qp"_xa
+inoremap ) <Esc>:call CloseBracket(")")<CR>"qp"_xa
 
 " Visual mode brackets
 vnoremap { <Esc>`>a}<Esc>`<i{<Esc>
@@ -50,9 +58,6 @@ map S :w<CR>:! ctags -R .<CR><CR>
 " ^x^f for file names
 " ^x^] for tags
 " ^n and ^p to go to next and previous suggestion
-
-" Newlines that preserve indentation
-" inoremap <CR> <Esc>A.<Esc>F"qd$0i <Esc>A.<Esc>0"wy/\S<CR>"_x$"_xo<Esc>"wp0"_x$"qp"_x^"_xI
 
 " Plugins
 call plug#begin('~/.vim/plugged')
