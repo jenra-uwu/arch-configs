@@ -30,7 +30,7 @@ function fish_user_key_bindings
     bind '$' bind_dollar
 end
 
-set -g fish_user_paths ~/.local/bin /usr/local/opt/openjdk/bin $fish_user_paths
+set -g fish_user_paths /opt/homebrew/bin ~/.local/bin /usr/local/opt/openjdk/bin $fish_user_paths
 
 thefuck --alias | source
 
