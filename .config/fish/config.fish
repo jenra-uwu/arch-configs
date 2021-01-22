@@ -44,6 +44,7 @@ end
 
 function fish_prompt
 	set -l stat $status
+	echo (set_color --bold yellow)'@'$hostname
 	echo -n (set_color --bold green)(prompt_pwd)(set_color normal)
 	echo -n (__fish_git_prompt)
 	if [ $stat -ne 0 ]
