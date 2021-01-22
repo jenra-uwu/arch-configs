@@ -32,8 +32,6 @@ end
 
 set -g fish_user_paths /opt/homebrew/bin ~/.local/bin /usr/local/opt/openjdk/bin $fish_user_paths
 
-thefuck --alias | source
-
 set __fish_git_prompt_show_informative_status
 set __fish_git_prompt_showcolorhints
 set __fish_git_prompt_showupstream "informative"
