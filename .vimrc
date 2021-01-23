@@ -10,6 +10,7 @@ set nocompatible
 set autoread
 nnoremap x "_x
 nnoremap c "_c
+nnoremap C "_C
 vnoremap x "_x
 vnoremap c "_c
 set background=dark
