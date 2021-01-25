@@ -6,30 +6,6 @@ config config --local status.showUntrackedFiles no
 
 abbr -ag mute-mic pactl set-source-mute @DEFAULT_SOURCE@
 
-function bind_bang
-    switch (commandline -t)[-1]
-        case "!"
-            commandline -t $history[1]; commandline -f repaint
-        case "*"
-            commandline -i !
-    end
-end
-
-function bind_dollar
-    switch (commandline -t)[-1]
-        case "!"
-            commandline -t ""
-            commandline -f history-token-search-backward
-        case "*"
-            commandline -i '$'
-    end
-end
-
-function fish_user_key_bindings
-    bind ! bind_bang
-    bind '$' bind_dollar
-end
-
 set -g fish_user_paths /opt/homebrew/bin ~/.local/bin /usr/local/opt/openjdk/bin $fish_user_paths
 
 set __fish_git_prompt_show_informative_status
@@ -40,13 +16,24 @@ function fish_greeting
 	neofetch -L
 end
 
+set fish_cursor_default block
+set fish_cursor_insert line
+set fish_cursor_replace underscore
+set fish_cursor_replace_one underscore
+set fish_cursor_visual block
+
+function fish_pre_exec -e fish_preexec -a a
+	echo -e '\x1b[A\x1b[K\x1b[A\x1b[K\x1b[35m~>\x1b[0m \x1b[36m'$a'\x1b[0m'
+end
+
 function fish_prompt
 	set -l stat $status
-	echo (set_color --bold yellow)'@'$hostname
-	echo -n (set_color --bold green)(prompt_pwd)(set_color normal)
-	echo -n (__fish_git_prompt)
 	if [ $stat -ne 0 ]
-		echo -n (set_color --bold red) $stat
+		echo -n (set_color --bold red)$stat' '
 	end
-	echo (set_color --bold magenta)' ~> '(set_color normal)
+	echo -n (set_color --bold yellow)'@'$hostname(set_color normal)
+	echo -n (set_color --bold green):(prompt_pwd)(set_color normal)
+	echo (__fish_git_prompt)
+	echo (set_color --bold magenta)'~> '(set_color normal)
 end
+
