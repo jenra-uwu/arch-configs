@@ -68,6 +68,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 
+let &t_SI .= "\<Esc>[5 q"
+let &t_EI .= "\<Esc>[2 q"
+
+
 " LaTeX stuff
 " Set file type
 au BufRead,BufNewFile *.tex set filetype=tex
