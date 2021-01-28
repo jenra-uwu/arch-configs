@@ -16,6 +16,7 @@ vnoremap x "_x
 vnoremap c "_c
 set background=dark
 set splitbelow
+let g:disable_key_mappings = "true"
 source ~/.config/nvim/themes/solarized8.vim
 
 " Copying in visual mode
@@ -28,6 +29,7 @@ inoremap [ []<Esc>i
 inoremap \[ \[\]<Esc>hi
 inoremap ( ()<Esc>i
 inoremap \( \(\)<Esc>hi
+tnoremap <C-e> <Esc><C-\><C-n>
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>
