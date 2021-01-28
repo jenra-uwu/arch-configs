@@ -5,6 +5,7 @@ set number
 syntax on
 set mouse=a
 filetype on
+set whichwrap+=<,>,h,l,[,]
 set clipboard=unnamedplus
 set nocompatible
 set autoread
@@ -18,9 +19,7 @@ set background=dark
 set splitbelow
 let g:disable_key_mappings = "true"
 source ~/.config/nvim/themes/solarized8.vim
-
-" Copying in visual mode
-vnoremap <C-c> y
+vnoremap <C-c> "+y
 
 " Opening brackets
 inoremap { {}<Esc>i
@@ -29,9 +28,9 @@ inoremap [ []<Esc>i
 inoremap \[ \[\]<Esc>hi
 inoremap ( ()<Esc>i
 inoremap \( \(\)<Esc>hi
-tnoremap <C-e> <Esc><C-\><C-n>
 
 " Use ctrl-[hjkl] to select the active split!
+tnoremap <C-e> <Esc><C-\><C-n>
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
