@@ -15,6 +15,7 @@ nnoremap C "_C
 vnoremap x "_x
 vnoremap c "_c
 set background=dark
+set splitbelow
 source ~/.config/nvim/themes/solarized8.vim
 
 " Copying in visual mode
@@ -27,6 +28,12 @@ inoremap [ []<Esc>i
 inoremap \[ \[\]<Esc>hi
 inoremap ( ()<Esc>i
 inoremap \( \(\)<Esc>hi
+
+" Use ctrl-[hjkl] to select the active split!
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
 
 function CloseBracket(closing)
 	let @q = a:closing
@@ -53,19 +60,11 @@ vnoremap \( <Esc>`>a\)<Esc>`<i\(<Esc>
 set path+=**
 set wildmenu
 
-" Use ^] to jump to tag under cursor
-" Use g^] for ambiguous tags
-" Use ^t to jump back up the tag stack
-command! MakeTags ! ctags -R .
-map S :w<CR>:! ctags -R .<CR><CR>
-
-" ^x^f for file names
-" ^x^] for tags
-" ^n and ^p to go to next and previous suggestion
-
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vimlab/split-term.vim'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 
