@@ -66,6 +66,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vimlab/split-term.vim'
 Plug 'preservim/nerdtree'
+Plug 'lervag/vimtex'
 call plug#end()
 
 
