@@ -1,6 +1,7 @@
 " Miscellaneous stuff
 set tabstop=4
 set shiftwidth=4
+set expandtab
 set number
 syntax on
 set mouse=a
@@ -20,6 +21,7 @@ set splitbelow
 let g:disable_key_mappings = "true"
 source ~/.config/nvim/themes/solarized8.vim
 vnoremap <C-c> "+y
+set updatetime=100
 
 " Opening brackets
 inoremap { {}<Esc>i
@@ -31,23 +33,21 @@ inoremap \( \(\)<Esc>hi
 
 " Use ctrl-[hjkl] to select the active split!
 tnoremap <C-e> <Esc><C-\><C-n>
-nmap <silent> <c-k> :wincmd k<CR>
-nmap <silent> <c-j> :wincmd j<CR>
-nmap <silent> <c-h> :wincmd h<CR>
-nmap <silent> <c-l> :wincmd l<CR>
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
 
 function CloseBracket(closing)
-	let @q = a:closing
-	if col(".") < col("$") && getline(".")[col(".")] == a:closing
-	else
-		let @Q = a:closing
-	end
+    if getline(".")[col(".") - 1] == a:closing && getline(".")[col(".")] == a:closing
+        :normal x
+   end
 endfunction
 
 " Closing brackets
-inoremap } <Esc>:call CloseBracket("}")<CR>"qp"_xa
-inoremap ] <Esc>:call CloseBracket("]")<CR>"qp"_xa
-inoremap ) <Esc>:call CloseBracket(")")<CR>"qp"_xa
+inoremap } }<Esc>:call CloseBracket("}")<CR>a
+inoremap ] ]<Esc>:call CloseBracket("]")<CR>a
+inoremap ) )<Esc>:call CloseBracket(")")<CR>a
 
 " Visual mode brackets
 vnoremap { <Esc>`>a}<Esc>`<i{<Esc>
@@ -63,15 +63,12 @@ set wildmenu
 
 " Plugins
 call plug#begin('~/.vim/plugged')
+Plug 'mhinz/vim-signify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vimlab/split-term.vim'
 Plug 'preservim/nerdtree'
 Plug 'lervag/vimtex'
 call plug#end()
-
-
-let &t_SI .= "\<Esc>[5 q"
-let &t_EI .= "\<Esc>[2 q"
 
 
 " LaTeX stuff
