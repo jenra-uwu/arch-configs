@@ -63,7 +63,7 @@ set wildmenu
 
 " Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vimlab/split-term.vim'
 Plug 'preservim/nerdtree'
