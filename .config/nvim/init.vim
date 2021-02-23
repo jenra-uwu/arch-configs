@@ -2,7 +2,7 @@
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set number
+set number relativenumber
 syntax on
 set mouse=a
 filetype on
@@ -21,7 +21,9 @@ set splitbelow
 let g:disable_key_mappings = "true"
 source ~/.config/nvim/themes/solarized8.vim
 vnoremap <C-c> "+y
-set updatetime=100
+set updatetime=10
+vmap <C-c> <Plug>(coc-codeaction-selected)
+nmap <C-c> <Plug>(coc-codeaction-selected)
 
 " Opening brackets
 inoremap { {}<Esc>i
