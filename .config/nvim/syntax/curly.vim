@@ -5,14 +5,14 @@ endif
 let b:current_syntax = "curly"
 
 " Keywords
-syntax keyword curlyKeyword with
+syntax keyword curlyKeyword let
 syntax keyword curlyKeyword for some all where pass stop
 syntax keyword curlyKeyword if then else
 syntax keyword curlyKeyword type enum ptr class match to
 syntax keyword curlyKeyword lambda
 syntax keyword curlyKeyword and or xor
 syntax keyword curlyKeyword in
-syntax keyword curlyKeyword module import qualified as extern
+syntax keyword curlyKeyword module import as extern
 highlight link curlyKeyword Keyword
 
 " Operators
@@ -28,7 +28,8 @@ syntax match curlyOperator "\v\^"
 syntax match curlyOperator "\v::?"
 syntax match curlyOperator "\v\(|\)|\[|\]|\{|\}"
 syntax match curlyOperator "\v\=\>|\-\>"
-syntax match curlyOperator "\v\.|,"
+syntax match curlyOperator "\v\.|,|;"
+syntax match curlyOperator "\v\$"
 highlight link curlyOperator Operator
 
 " Values
@@ -42,7 +43,7 @@ syntax match curlyConst "\v'(\\.|[^\\'])'"
 highlight link curlyConst Constant
 
 " Identifiers
-syntax match curlyIdent "\v((true|false)[a-zA-Z0-9_']@!)@![$@a-z_][a-zA-Z0-9_']*"
+syntax match curlyIdent "\v((true|false)[a-zA-Z0-9_']@!)@![@a-z_][a-zA-Z0-9_']*"
 highlight link curlyIdent Identifier
 syntax match curlyType "\v[A-Z][a-zA-Z0-9_']*"
 highlight link curlyType Type

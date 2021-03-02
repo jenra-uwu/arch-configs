@@ -2,7 +2,7 @@
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set number relativenumber
+set number
 syntax on
 set mouse=a
 filetype on
