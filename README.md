@@ -5,6 +5,7 @@
 - ctags
 - dragon-drag-and-drop
 - dunst
+- exa
 - fish
 - feh
 - ff2mpv-native-messaging-host-git (and corresponding firefox extension ff2mpv)

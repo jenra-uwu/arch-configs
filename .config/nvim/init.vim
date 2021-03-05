@@ -46,7 +46,7 @@ nmap <silent> <C-l> :wincmd l<CR>
 
 function CloseBracket(closing)
     if getline(".")[col(".") - 1] == a:closing && getline(".")[col(".")] == a:closing
-        :normal x
+        :normal "_x
    end
 endfunction
 
