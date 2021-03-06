@@ -5,6 +5,10 @@
             "args": ["--lsp"],
             "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
             "filetypes": ["haskell", "lhaskell"]
+        },
+        "curly" : {
+            "command": "curls",
+            "filetypes": ["curly"]
         }
     },
     "cSpellExt.enableDictionaries": ["spanish"],
@@ -33,6 +37,7 @@
       "builtins",
       "bytecode",
       "calloc",
+      "clippy",
       "codegen",
       "codegenned",
       "codespan",
