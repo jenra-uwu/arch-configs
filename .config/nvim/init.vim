@@ -1,4 +1,5 @@
 " Miscellaneous stuff
+set updatetime=300
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -69,6 +70,7 @@ set wildmenu
 
 " Plugins
 call plug#begin('~/.vim/plugged')
+Plug 'OmniSharp/omnisharp-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vimlab/split-term.vim'
@@ -86,7 +88,7 @@ au BufNewFile *.tex 0r ~/.vim/templates/latex.tex
 autocmd FileType tex inoremap ;; <Esc>/%%%%<Enter>"_c4l
 autocmd FileType tex inoremap ;b \begin{}<Esc>i
 " Create \end{thingy}
-autocmd FileType tex inoremap ;e <Esc>F\"wyf}o<Esc>"wpbbb"_cwend<Esc>A%%%%<Esc>k0i <Esc>"wy/\S<CR>"_xj0"wP0"_xko<Esc>"wp0"_xA<Tab>
+autocmd FileType tex inoremap ;e <Esc>F\"wyf}o<Esc>"wpbbb"_cwend<Esc>A%%%%<Esc>k0i <Esc>"wy/\S<CR>:noh<CR>"_xj0"wP0"_xko<Esc>"wp0"_xA<Tab>
 " Compile and display LaTeX
 autocmd FileType tex map C :w<CR>:! if pdflatex (echo %); pkill -f (echo -n 'zathura ' && echo (echo % \| sed 's/tex$/pdf/')); zathura (echo % \| sed 's/tex$/pdf/') & disown; end<CR><CR>
 " Double dollar sign and skip over dollar signs
