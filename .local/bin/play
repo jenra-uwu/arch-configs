@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mpv --no-video $@ &> /dev/null &
+$pid = $!
+cava
+kill $pid
