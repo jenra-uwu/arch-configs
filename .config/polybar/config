@@ -17,9 +17,10 @@ blue	= #268bd2
 cyan	= #2aa198
 green	= #859900
 
-[bar/top]
+[bar/bottom]
 height = 27
 fixed-center = true
+bottom = true
 
 background = ${colors.base03}
 foreground = ${colors.base3}

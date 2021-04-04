@@ -179,7 +179,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Start polybar
-exec_always --no-startup-id killall -q polybar; polybar -c .config/polybar/config top
+exec_always --no-startup-id killall -q polybar; polybar -c .config/polybar/config bottom
 
 # Screenshots
 bindsym ctrl+shift+3 exec --no-startup-id scrot ~/Pictures/Screenshots/Screenshot\ %Y-%m-%d\ %H:%M:%S.png
