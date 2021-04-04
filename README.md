@@ -2,14 +2,13 @@
 `<meme>btw i use arch :3</meme>`
 
 ## Packages installed
-- ctags
+- cava
 - dragon-drag-and-drop
 - dunst
 - exa
 - fish
 - feh
 - ff2mpv-native-messaging-host-git (and corresponding firefox extension ff2mpv)
-- gvim
 - highlight
 - i3-gaps
 - jq
@@ -19,6 +18,7 @@
 - mpv
 - mpv-mpris
 - nano
+- neovim
 - picom-ibhagwan-git
 - playerctl
 - polybar
