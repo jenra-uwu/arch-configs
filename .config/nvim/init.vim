@@ -20,11 +20,9 @@ vnoremap c "_c
 set background=dark
 set splitbelow
 let g:disable_key_mappings = "true"
-source ~/.config/nvim/themes/solarized8.vim
-vnoremap <C-c> "+y
 set updatetime=10
-vmap <C-c> <Plug>(coc-codeaction-selected)
 nmap <C-c> <Plug>(coc-codeaction-selected)
+vnoremap <C-c> "+y
 nmap j gj
 nmap k gk
 vmap j gj

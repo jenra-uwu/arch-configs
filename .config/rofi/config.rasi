@@ -1,9 +1,9 @@
 configuration {
-	font: "System San Francisco 20";
+    font: "Fira Math Medium 20";
 	fullscreen: false;
-	color-window: "#c0002b36";
-	color-normal: "#00000000, #fdf6e3, #00000000";
-	color-active: "#767676, #fdf6e3";
+	color-window: "#c0F9C7DF";
+	color-normal: "#00000000, #471029, #00000000";
+	color-active: "#743E57, #471029";
 	color-urgent: "#00000000, #dc322f";
 
 	lines: 5;
@@ -12,4 +12,5 @@ configuration {
 	hide-scrollbar: true;
 	bw: 0;
 	separator-style: "none";
+    show-icons: true;
 }

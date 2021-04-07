@@ -9,6 +9,6 @@ if [ (echo -e " Logout\n Cancel" | rofi -dmenu	\
 		-no-custom							\
 		-kb-select-1 "Super+Q"						\
 	) = " Logout" ]
-	i3-msg exit
+	bspc quit
 end
 

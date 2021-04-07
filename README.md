@@ -19,7 +19,7 @@
 - mpv-mpris
 - nano
 - neovim
-- picom-ibhagwan-git
+- picom-rounded-corners
 - playerctl
 - polybar
 - qbittorrent

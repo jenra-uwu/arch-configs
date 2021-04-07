@@ -1,12 +1,12 @@
 [colors]
-base03	= #c0002b36
-base02	= #c0073642
-base01	= #c0586e75
-base00	= #657b83
-base0	= #839496
-base1	= #93a1a1
-base2	= #eee8d5
-base3	= #fdf6e3
+base03	= #c0F9C7DF
+base02	= #c0E3B1C9
+base01	= #c0CD9AB2
+base00	= #A06C84
+base0	= #8A556E
+base1	= #743E57
+base2	= #5E2740
+base3	= #471029
 
 yellow	= #b58900
 orange	= #cb4b16
@@ -17,10 +17,9 @@ blue	= #268bd2
 cyan	= #2aa198
 green	= #859900
 
-[bar/bottom]
+[bar/top]
 height = 27
 fixed-center = true
-bottom = true
 
 background = ${colors.base03}
 foreground = ${colors.base3}
@@ -41,26 +40,28 @@ font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
 font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
 
-modules-left = i3
+modules-left = bspwm
 modules-center = date
 modules-right = network microphone pulseaudio battery
 
 tray-position = none
 
-[module/i3]
-type = internal/i3
+wm-restack = bspwm
+enable-ipc = true
+
+[module/bspwm]
+type = internal/bspwm
 format = <label-state> <label-mode>
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
+enable-click = false
+enable-scroll = false
+
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = X;
 ws-icon-default = 
 
 label-mode = %mode%
@@ -76,6 +77,12 @@ label-unfocused-padding = 2
 label-urgent = %icon%
 label-urgent-underline = ${colors.red}
 label-urgent-padding = 2
+
+label-empty = %icon%
+label-empty-padding = 2
+
+label-occupied = %icon%
+label-occupied-padding = 2
 
 [module/microphone]
 type = custom/script
@@ -110,8 +117,8 @@ label-underline = ${colors.violet}
 [module/network]
 type = internal/network
 
-interface = wlp3s0
-unknown-as-up = true
+interface = wlp0s20f3
+unknown-as-up = false
 
 label-connected =  %downspeed%
 
@@ -120,7 +127,7 @@ label-disconnected = 
 [module/battery]
 type = internal/battery
 
-full-at = 95
+full-at = 100
 
 battery = BAT0
 adapter = ADP1

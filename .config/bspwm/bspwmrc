@@ -1,0 +1,33 @@
+#!/bin/bash
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+picom
+
+bspc config border_width         0
+bspc config window_gap          20
+
+bspc config split_ratio          0.5
+bspc config borderless_monocle   true
+bspc config gapless_monocle      false
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+
+xinput --set-prop 'DLL09D9:00 04F3:3147 Touchpad' "libinput Tapping Enabled" 1
+xinput --set-prop 'DLL09D9:00 04F3:3147 Touchpad' "libinput Natural Scrolling Enabled" 1
+xinput --set-prop 'DLL09D9:00 04F3:3147 Touchpad' "libinput Disable While Typing Enabled" 0
+xinput --set-prop 'DLL09D9:00 04F3:3147 Touchpad' "libinput Tapping Drag Enabled" 0
+
+pkill polybar
+polybar -r -c .config/polybar/config top
+
+xset s 180
+xss-lock --transfer-sleep-lock -- betterlockscreen -s
+betterlockscreen -w wallpaper.png
+
+./.config/bspwm/cleanfullscreen

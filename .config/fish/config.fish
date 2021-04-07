@@ -12,6 +12,7 @@ set -g fish_user_paths ~/bin ~/.cargo/bin /opt/homebrew/bin ~/.local/bin /usr/lo
 set __fish_git_prompt_show_informative_status
 set __fish_git_prompt_showcolorhints
 set __fish_git_prompt_showupstream "informative"
+fish_vi_key_bindings
 
 function fish_greeting
 	neofetch -L

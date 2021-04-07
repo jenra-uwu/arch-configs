@@ -12,4 +12,4 @@ xinput --set-prop bcm5974 "libinput Natural Scrolling Enabled" 1
 xinput --set-prop bcm5974 "libinput Disable While Typing Enabled" 0
 xinput --set-prop bcm5974 "libinput Tapping Drag Enabled" 0
 
-exec i3
+exec bspwm
