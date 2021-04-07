@@ -17,7 +17,7 @@ nnoremap c "_c
 nnoremap C "_C
 vnoremap x "_x
 vnoremap c "_c
-set background=dark
+set background=light
 set splitbelow
 let g:disable_key_mappings = "true"
 set updatetime=10

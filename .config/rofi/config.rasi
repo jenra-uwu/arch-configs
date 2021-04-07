@@ -1,16 +1,16 @@
 configuration {
     font: "Fira Math Medium 20";
-	fullscreen: false;
-	color-window: "#c0F9C7DF";
-	color-normal: "#00000000, #471029, #00000000";
-	color-active: "#743E57, #471029";
-	color-urgent: "#00000000, #dc322f";
+    fullscreen: false;
+    color-window: "#c0F9C7DF";
+    color-normal: "#00000000, #471029, #00000000";
+    color-active: "#743E57, #471029";
+    color-urgent: "#00000000, #dc322f";
 
-	lines: 5;
-	max-history-size: 5;
+    lines: 5;
+    max-history-size: 5;
 
-	hide-scrollbar: true;
-	bw: 0;
-	separator-style: "none";
+    hide-scrollbar: true;
+    bw: 0;
+    separator-style: "none";
     show-icons: true;
 }

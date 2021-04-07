@@ -8,14 +8,14 @@ base1	= #743E57
 base2	= #5E2740
 base3	= #471029
 
-yellow	= #b58900
-orange	= #cb4b16
-red		= #dc322f
-magenta	= #d33682
-violet	= #6c71c4
-blue	= #268bd2
-cyan	= #2aa198
-green	= #859900
+yellow	= #E5CF09
+orange	= #BC4519
+red		= #C51725
+magenta	= #DD59AF
+violet	= #4D5FA8
+blue	= #0C59AC
+cyan	= #3182D8
+green	= #00CC52
 
 [bar/top]
 height = 27
