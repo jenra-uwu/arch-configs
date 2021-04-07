@@ -24,10 +24,6 @@ set fish_cursor_replace underscore
 set fish_cursor_replace_one underscore
 set fish_cursor_visual block
 
-function fish_pre_exec -e fish_preexec -a a
-	echo -e '\x1b[A\x1b[K\x1b[A\x1b[K\x1b[35m~>\x1b[0m \x1b[36m'$a'\x1b[0m'
-end
-
 function fish_prompt
 	set -l stat $status
 	if [ $stat -ne 0 ]
