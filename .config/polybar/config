@@ -82,6 +82,7 @@ label-empty = %icon%
 label-empty-padding = 2
 
 label-occupied = %icon%
+label-occupied-underline = ${colors.blue}
 label-occupied-padding = 2
 
 [module/microphone]

@@ -33,3 +33,5 @@ xss-lock --transfer-sleep-lock -- betterlockscreen -s &
 cleanfullscreen &
 discord &
 dunst &
+pgrep battery_notifier || battery_notifier &
+touchegg &
