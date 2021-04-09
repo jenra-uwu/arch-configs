@@ -4,11 +4,10 @@ pgrep polybar && pkill polybar
 polybar -c .config/polybar/config top &
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-pgrep bspswallow > /dev/null || bspswallow &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 feh --bg-fill wallpaper.png
-picom
+picom &
 
 bspc config border_width         0
 bspc config window_gap          20
@@ -26,12 +25,11 @@ bspc rule -a Screenkey manage=off
 
 xinput --set-prop 'DLL09D9:00 04F3:3147 Touchpad' "libinput Tapping Enabled" 1
 xinput --set-prop 'DLL09D9:00 04F3:3147 Touchpad' "libinput Natural Scrolling Enabled" 1
-xinput --set-prop 'DLL09D9:00 04F3:3147 Touchpad' "libinput Disable While Typing Enabled" 0
 xinput --set-prop 'DLL09D9:00 04F3:3147 Touchpad' "libinput Tapping Drag Enabled" 0
 
 xset s 180
-xss-lock --transfer-sleep-lock -- betterlockscreen -s
+xss-lock --transfer-sleep-lock -- betterlockscreen -s &
 
-cleanfullscreen
-discord
+cleanfullscreen &
+discord &
 dunst &
