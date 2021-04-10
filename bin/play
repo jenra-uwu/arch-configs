@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-mpv $@ --no-video &> /dev/null &
+mpv "$@" --no-video &> /dev/null &
 pid="$!"
 cava
 kill $pid
