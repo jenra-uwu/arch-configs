@@ -74,16 +74,16 @@ label-focused-padding = 2
 label-unfocused = %icon%
 label-unfocused-padding = 2
 
-label-urgent = %icon%
-label-urgent-underline = ${colors.red}
-label-urgent-padding = 2
-
 label-empty = %icon%
 label-empty-padding = 2
 
 label-occupied = %icon%
 label-occupied-underline = ${colors.blue}
 label-occupied-padding = 2
+
+label-urgent = %icon%
+label-urgent-underline = ${colors.red}
+label-urgent-padding = 2
 
 [module/microphone]
 type = custom/script
