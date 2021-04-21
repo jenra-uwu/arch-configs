@@ -298,8 +298,8 @@
     icon = ~/.config/dunst/normal.png
 
 [urgency_normal]
-    background = "#471029"
-    foreground = "#F9C7DF"
+    foreground = "#471029"
+    background = "#F9C7DF"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     icon = ~/.config/dunst/normal.png
