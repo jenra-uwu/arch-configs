@@ -1,0 +1,9 @@
+[user]
+    email = a
+    name = jenra
+[credential]
+    helper = store
+[init]
+    defaultBranch = main
+[diff]
+    tool = nvimdiff

@@ -6,7 +6,7 @@ pgrep polybar && pkill polybar
 polybar -c .config/polybar/config top &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
-feh --bg-fill wallpaper.png
+feh --bg-fill Pictures/wallpaper.png
 picom &
 
 bspc config border_width         0
@@ -30,7 +30,7 @@ xinput --set-prop 'DLL09D9:00 04F3:3147 Touchpad' "libinput Natural Scrolling En
 xinput --set-prop 'DLL09D9:00 04F3:3147 Touchpad' "libinput Tapping Drag Enabled" 0
 
 xset s 180
-xss-lock --transfer-sleep-lock -- betterlockscreen -s &
+xss-lock --transfer-sleep-lock -- betterlockscreen -l &
 
 cleanfullscreen &
 discord &
