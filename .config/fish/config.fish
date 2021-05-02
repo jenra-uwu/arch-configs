@@ -7,7 +7,7 @@ config config --local status.showUntrackedFiles no
 
 abbr -ag mute-mic pactl set-source-mute @DEFAULT_SOURCE@
 
-set -g fish_user_paths ~/bin ~/.cargo/bin /opt/homebrew/bin ~/.local/bin /usr/local/opt/openjdk/bin $fish_user_paths
+set -g fish_user_paths /opt/riscv/bin ~/bin ~/.cargo/bin /opt/homebrew/bin ~/.local/bin /usr/local/opt/openjdk/bin $fish_user_paths
 
 set __fish_git_prompt_show_informative_status
 set __fish_git_prompt_showcolorhints
