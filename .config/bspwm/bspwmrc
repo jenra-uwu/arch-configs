@@ -18,12 +18,8 @@ bspc config gapless_monocle      false
 
 bspc rule -a "org.pwmt.zathura" state=tiling
 bspc rule -a zoom desktop='^4'
-bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Gimp desktop='^8' follow=on
 bspc rule -a discord desktop='^10'
-bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
 
 xinput --set-prop 'DLL09D9:00 04F3:3147 Touchpad' "libinput Tapping Enabled" 1
 xinput --set-prop 'DLL09D9:00 04F3:3147 Touchpad' "libinput Natural Scrolling Enabled" 1

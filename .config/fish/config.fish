@@ -3,7 +3,7 @@ alias please=sudo
 alias ssh='kitty +kitten ssh'
 alias config='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
 alias ls='exa'
-config config --local status.showUntrackedFiles no
+config config --local status.showUntrackedFiles no &> /dev/null
 
 abbr -ag mute-mic pactl set-source-mute @DEFAULT_SOURCE@
 
