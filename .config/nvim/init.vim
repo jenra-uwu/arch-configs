@@ -65,6 +65,16 @@ vnoremap \( <Esc>`>a\)<Esc>`<i\(<Esc>
 set path+=**
 set wildmenu
 
+" Tags
+autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
+function GenerateAllTags()
+    if &filetype == "rust"
+        :!rusty-tags vi
+    else
+        :!ctags -R *
+    end
+endfunction
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'OmniSharp/omnisharp-vim'
@@ -74,7 +84,6 @@ Plug 'vimlab/split-term.vim'
 Plug 'preservim/nerdtree'
 Plug 'lervag/vimtex'
 call plug#end()
-
 
 " LaTeX stuff
 " Set file type
