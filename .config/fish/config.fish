@@ -2,11 +2,7 @@
 
 alias rickroll='curl -L http://bit.ly/10hA8iC | bash'
 alias please=sudo
-
-if [ $TERM = 'xterm-kitty' ]
-    alias ssh='kitty +kitten ssh'
-end
-
+alias ssh='kitty +kitten ssh'
 alias config='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
 alias ls='exa'
 config config --local status.showUntrackedFiles no &> /dev/null
