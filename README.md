@@ -2,15 +2,14 @@
 `<meme>btw i use arch :3</meme>`
 
 ## Packages installed
+- bspwm
 - cava
 - dragon-drag-and-drop
 - dunst
 - exa
-- fish
 - feh
 - ff2mpv-native-messaging-host-git (and corresponding firefox extension ff2mpv)
 - highlight
-- i3-gaps
 - jq
 - kitty
 - libinput-three-finger-drag
@@ -31,6 +30,10 @@
 - ueberzug
 - xorg
 - xss-lock
+- zsh
+- zsh-autosuggestions
+- zsh-syntax-highlighting
+- zsh-vi-mode
 
 ## Fonts installed
 - Font Awesome
@@ -38,10 +41,6 @@
 - noto-fonts-cjk
 - noto-fonts-emoji
 - otf-firamath
-
-## Theme installed
-- Solarized-Dark-Magenta
-- solarized-sddm-theme
 
 ## Vim plugins
 - vim-plug
