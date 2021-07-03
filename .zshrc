@@ -36,7 +36,7 @@ config config --local status.showUntrackedFiles no &> /dev/null
 
 alias mute-mic='pactl set-source-mute @DEFAULT_SOURCE@'
 
-PATH="~/.rbenv/versions/2.7.3/bin/:/opt/riscv/bin:~/bin:~/.cargo/bin:/opt/homebrew/bin:~/.local/bin:/usr/local/opt/openjdk/bin:~/.local/share/gem/ruby/3.0.0/bin:$PATH"
+PATH="/opt/riscv-linux/bin/:/opt/riscv/bin/:~/.rbenv/versions/2.7.3/bin/:/opt/riscv/bin:~/bin:~/.cargo/bin:/opt/homebrew/bin:~/.local/bin:/usr/local/opt/openjdk/bin:~/.local/share/gem/ruby/3.0.0/bin:$PATH"
 
 # Startup message is neofetch logo
 neofetch -L
@@ -76,10 +76,12 @@ zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 # ~> 
 setopt PROMPT_SUBST
 PROMPT='$PROMPT_VI_MODE_BOX%f%s%(?. . %F{red}%?%f )%F{yellow}@%m%F{green}:%~%f%b $vcs_info_msg_0_
-%F{magenta}$B~>%f%b '
+%F{magenta}%B~>%f%b '
 
 # Syntax highlighting, autosuggestions, and a good Vi mode
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
+# Ocaml stuff
+test -r ~/.opam/opam-init/init.zsh && source ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

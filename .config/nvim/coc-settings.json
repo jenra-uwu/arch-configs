@@ -102,6 +102,7 @@
       "microbiome",
       "mmap",
       "morloc",
+      "mprotect",
       "mtype",
       "mult",
       "munmap",
