@@ -155,7 +155,7 @@ Print
 shift + Print
     scrot -u ~/Pictures/Screenshots/Screenshot\ %Y-%m-%d\ %H:%M:%S.png
 ctrl + Print
-    import ~/Pictures/Screenshots/Screenshot\ $(date +%Y-%m-%d\ %H:%M:%S).png
+    import "$HOME/Pictures/Screenshots/Screenshot $(date +%Y-%m-%d\ %H:%M:%S).png"
 
 # Applications
 super + e
